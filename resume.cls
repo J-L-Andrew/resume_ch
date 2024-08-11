@@ -38,8 +38,8 @@
 \RequirePackage{enumitem}
 \setlist{noitemsep} % removes spacing from items but leaves space around the whole list
 %\setlist{nosep} % removes all vertical spacing within and around the list
-\setlist[itemize]{topsep=0.25em, leftmargin=1.5pc}
-\setlist[enumerate]{topsep=0.25em, leftmargin=1.5pc}
+\setlist[itemize]{topsep=0.25em, leftmargin=1pc}
+\setlist[enumerate]{topsep=0.25em, leftmargin=1pc}
 \RequirePackage[super]{nth}
 
 \titleformat{\section}         % Customise the \section command 
@@ -47,7 +47,7 @@
                                % small capitals (\scshape) and left aligned (\raggedright)
   {}{0em}                      % Can be used to give a prefix to all sections, like 'Section ...'
   {}                           % Can be used to insert code before the heading
-  [\titlerule]                 % Inserts a horizontal line after the heading
+  [{\titlerule[1pt]}]                 % Inserts a horizontal line after the heading
 \titlespacing*{\section}{0cm}{*1}{*1}
 
 \titleformat{\subsection}
@@ -67,7 +67,7 @@
 }
 
 \newcommand{\name}[1]{
-  \centerline{\Huge\scshape{#1}}
+  {\Huge\scshape{#1}}
   \vspace{1.2ex}
 }
 
@@ -82,6 +82,12 @@
   }
   \vspace{0.7ex}
 }
+
+\newcommand{\contactInfonew}[2]{
+  {\large{\ {#1} ｜ {#2}}}
+  \vspace{0.7ex}
+}
+
 
 \newcommand{\role}[2]{
   {\par \textit{#1} ~ #2 \par}

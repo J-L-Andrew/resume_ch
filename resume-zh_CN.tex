@@ -2,65 +2,137 @@
 % !TEX encoding = UTF-8 Unicode
 % !Mode:: "TeX:UTF-8"
 
-\documentclass{resume}
+\documentclass[a4paper]{resume}
 \usepackage{zh_CN-Adobefonts_external} % Simplified Chinese Support using external fonts (./fonts/zh_CN-Adobe/)
 %\usepackage{zh_CN-Adobefonts_internal} % Simplified Chinese Support using system fonts
 \usepackage{linespacing_fix} % disable extra space before next section
 \usepackage{cite}
+\usepackage{hyperref}
+
+% Adjust margins
+
+
+% Just in case someone needs a heading that does not need to be in a list
+\newcommand{\resumeHeading}[4]{
+    \begin{tabular*}{0.99\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
 
 \begin{document}
 \pagenumbering{gobble} % suppress displaying page number
 
-\name{江涛}
+\begin{minipage}[t]{0.8\textwidth}
+  \vspace{-20pt}
+  \name{\textbf{\stk{黄朝晖}}}\\
+  \contactInfonew{\stk{手机}: \href{tel:+8618811711781}{+86 188-1171-1781}}{\stk{邮箱}: \href{mailto:andrew.z.huang@outlook.com}{andrew.z.huang@outlook.com}~}\\
+  \contactInfonew{GitHub: \href{https://github.com/J-L-Andrew}{github.com/J-L-Andrew}}{LinkedIn: \href{https://www.linkedin.com/in/andrewhuangpku/}{linkedin.com/in/andrewhuangpku}~}\\
 
-% {E-mail}{mobilephone}{homepage}
-% be careful of _ in emaill address
-\contactInfo{(+86) 132-6029-9910}{hijiangtao@gmail.com}{Web前端研发工程师}{GitHub @hijiangtao}
-% {E-mail}{mobilephone}
-% keep the last empty braces!
-%\contactInfo{xxx@yuanbin.me}{(+86) 131-221-87xxx}{}
- 
-\section{个人总结}
-本人在校成绩优秀、乐观向上，工作负责、自我驱动力强、热爱尝试新事物，认同开放、连接、共享的Web在未来的不可替代性。在校期间长期从事可视分析(Web的2D/3D时空可视化)相关研究，对Web技术发展趋势及前端工程化解决方案有浓厚兴趣。\textbf{现任职于阿里巴巴集团。}
+\end{minipage}%
+\begin{minipage}[t]{0.2\textwidth}
+  \vspace{-51pt} % Top align the minipage
+  \raggedleft % Right align the image
+  \includegraphics[width=0.95in]{resume_ch-master/picold.jpg}
+\end{minipage}
 
 % \section{\faGraduationCap\ 教育背景}
-\section{教育背景}
-\datedsubsection{\textbf{中国科学院大学},计算机应用技术,\textit{在读硕士研究生}}{2015.9 - 2018.6}
-\ \textbf{排名11/133(前10\%)},中国科学院大学学业奖学金(2次),IEEE Student member,预计2018年6月毕业
-\datedsubsection{\textbf{北京理工大学},软件工程,\textit{工学学士}}{2011.9 - 2015.6}
-\ \textbf{排名2/62(前5\%)},国家励志奖学金,人民奖学金(7次),科技竞赛奖(2次),北京市普通高等学校优秀毕业生,北京理工大学优秀毕业生,软件学院金牌毕业生,优秀团员/优秀学生(5次)
-\datedsubsection{\textbf{荷兰 莱顿大学},计算机科学与技术,\textit{国家留学基金委公派交换生}}{2015.3 - 2015.5}
-\ 2014年中国政府奖学金(\textit{http://www.csc.edu.cn/}),DID-ACTE项目交换生(\textit{http://did-acte.org/})
+\section{\textbf{\stk{教育背景}}}
+\begin{itemize}
+  \item \datedsubsection{\textbf{\stk{北京大学|}}\stk{工程力学，理学博士}}{\stk{北京，中国｜}2020.09 - \stk{至今}}\\
+  \begin{itemize}[leftmargin=2.0pc]
+    \item \stk{学术经历：主要从事颗粒物质、计算物理、离散元模拟研究；\textbf{\stk{耶鲁大学联合培养（2023.10 - 至今）}}}
+    %\item \stk{荣誉奖励：北京大学校长奖学金、国家留学基金委奖学金、李惠荣奖学金、优秀科研奖（2次）}
+    \item \stk{主要课程：机器学习、深度学习技术与应用、计算智能、并行程序设计、工程数据分析}
+    %\item \stk{校园职位：校学生台湾研究会会长、校学生记者团主编、博士班级班长、院团委组织部副部长}
+    
+  \end{itemize}
 
-% \section{\faCogs\ IT 技能}
-\section{技术能力}
-% increase linespacing [parsep=0.5ex]
-\begin{itemize}[parsep=0.2ex]
-  \item \textbf{编程语言}: JavaScript (ECMAScript, Node.js), HTML/CSS, Python, Go, SQL, C, Shell
-  \item \textbf{操作系统,数据库与工程构建}: Linux/macOS/MySQL/MongoDB/Git/webpack/Progressive Web App
-  \item \textbf{关键词}: React/Vue.js/D3.js(SVG)/three.js(canvas, WebGL)/chrome extension/Express
+  \item \datedsubsection{\textbf{\stk{密歇根大学|}}\stk{应用数据科学，理学硕士}}{\stk{安娜堡，美国｜} \stk{2024秋入学}}\\
+  % \begin{itemize}[leftmargin=2.0pc]
+  %   \item \stk{主要课程：自然语言处理、强化学习、数据库架构与技术、云计算、大数据、数据挖掘}
+  % \end{itemize}
+
+  \item \datedsubsection{\textbf{\stk{佐治亚理工学院|}}\stk{计算科学-机器学习，理学硕士}}{\stk{亚特兰大，美国｜}\stk{2024秋入学}}\\
+  % \begin{itemize}[leftmargin=2.0pc]
+  %   \item \stk{主要课程：计算机视觉、机器人与人工智能技术、贝叶斯方法}
+  % \end{itemize}
+    
+  \item \datedsubsection{\textbf{\stk{北京大学|}}\stk{理论与应用力学，理学学士}}{\stk{北京，中国｜}2016.09 - 2020.06}\\
+  \begin{itemize}[leftmargin=2.0pc]
+    \item \stk{主要课程:数学分析、程序设计、数据结构与算法、概率与数理统计}
+  \end{itemize}
+
 \end{itemize}
 
-% \end{itemize}
-
-\section{实习经历}
-\datedsubsection{\textbf{阿里巴巴集团 | Alibaba}, 前端开发工程师}{2017.6-2017.9}
+\section{\textbf{\stk{实习经历}}}
 \begin{itemize}
-%   \item 飞猪北京前端团队全面负责各交通线的票务(机票/火车票/汽车票) web 应用与事业群基础架构研发
-  \item 独立负责车站地图开发(React),通过HTML5 本地存储及JSBridge实现在阿里全系应用中发布上线
-  \item 独立负责BU SPM chrome插件开发,支付成功/订单详情等页面的开发与交叉营销的接入工作
+  \item \datedsubsection{\textbf{\stk{KASUT PRADA Lab (可信智能与数据分析实验室)，合作研究者}}}{2024.04 - \stk{至今}}\\
+
+  \begin{itemize}[leftmargin=2.0pc]
+    \item \stk{基于Hofstede文化维度，通过表征工程方法优化Llama-3-7b模型，显著提升其在跨文化场景中的应用效果，无需微调}
+    \item \stk{针对不同国家（美国、中国、阿拉伯）训练Reward Model，并通过表征编辑微调大模型，显著改善大模型在跨文化数据上的表现}
+  \end{itemize}
 \end{itemize}
 
-\datedsubsection{\textbf{北京腾云天下科技有限公司 | TalkingData},数据挖掘与可视化工程师}{2015.11-2017.5}
+\section{\textbf{\stk{项目经验}}}
 \begin{itemize}
-  \item \textbf{利用海量用户定位数据，对城市空间及人群移动特征进行研究。}第一个课题是基于香农熵和人群出行模式，构建城市网格与用户矩阵分析城市多样性/流动性分布；可视分析平台前端与可视化基于D3/Vue/Express开发，数据分析与存储采用Python/MySQL/MongoDB技术，为了均衡大数据情况下的页面可视化渲染消耗用canvas替代svg。第二个课题是对海量商场定位数据做人群分类与可视化查询，依据该系统撰写的论文被CIKM 2016(DAVA Workshop)录用，并收录于中科院软件所年会成果集
-  \item 负责数据科学部HQ LAB的可视化原型开发，主导 TalkingMind 平台系统设计与前端开发
+
+\item \datedsubsection{\textbf{\stk{Kaggle - LMSYS - Chatbot Arena Human Preference Predictions (银牌)}}}{2024.07 - 2024.08}\\
+\begin{itemize}[leftmargin=2.0pc]
+
+    \item \stk{基于对话数据集预测人类偏好，采用QLoRA方法微调gemma2-9b与llama3.1-8b两个模型}
+    \item \stk{调整超参数（学习率，模块冻结、prompt长度等）并保存最优训练权重，将两个模型加权融合}
+
 \end{itemize}
 
-\datedsubsection{\textbf{北京格灵深瞳信息技术有限公司 | DeepGlint},Web开发工程师}{2015.7-2015.9}
-\begin{itemize}
-  \item \textbf{独立负责MUSE部门的可视化组件研发。}与平台研发、设计协作完成 DeepGlint Developer 平台可视化图表组件的集成开发，符合完全定制化渲染、响应式布局与实时更新等特点
-  \item 利用 D3+Vue+WebGL(Three.js) 尝试实现三维空间的人群移动可视化
+\item \datedsubsection{\textbf{\stk{Kaggle - Image Matching Challenge 2024 - Hexathlon (银牌)}}}{2024.05 - 2024.06}\\
+  %\datedsubsection{\stk{项目执行者}}{2022.05 - 2022.10}
+  \begin{itemize}[leftmargin=2.0pc]
+
+    \item \stk{针对多种不同3D场景的图像数据集进行检索，使用预训练模型efficientnet-b6&b7的ImageNet权重提取图像数据特征，基于余弦距离筛选，根据相似度排序每个场景数据集前n张图像集}
+    \item \stk{用两个办法提取与匹配图像的特征关键点，一是分别使用kornia的角点特征检测器CornerGFTT及AdaLAM算法，二是分别使用SuperPoint及SuperGlue算法，最后存储匹配成功的点对}
+    \item \stk{排除上述两种方法内相同点对后叠加，输入pycolmap计算最终的3d空间位置关系}
+  \end{itemize}
+
+% \item \datedsubsection{\textbf{\stk{基于强化学习的最密填充探索}}}{2022.05 - 2022.10}\\
+%   %\datedsubsection{\stk{项目执行者}}{2022.05 - 2022.10}
+%   \begin{itemize}[leftmargin=2.0pc]
+%     \item \stk{对于椭球的最密晶胞填充，将传统贪心算法拓展到强化学习框架下，并耦合了无重叠安全约束}
+%     \item \stk{对晶胞-颗粒系统进行Bi-level优化。结果未能达到贪心算法的精度，但填充密度接近}
+%   \end{itemize}
+  
+  \item \datedsubsection{\textbf{\stk{局部有序结构的无监督学习算法}}}{2021.03 - 2022.01}\\
+  %\datedsubsection{\stk{项目参与者}}{2021.03 - 2022.01}
+
+  \begin{itemize}[leftmargin=2.0pc]
+    \item \stk{将颗粒填充的局部结构转为点云格式，通过满足旋转、位移和交换不变性的深度自编码器降维}
+    \item \stk{提出新的无监督学习算法，利用高斯混合模型或HDBSCAN进行结构聚类，再基于点云网络PointNet对填充中的结构进行识别并分类，公开数据集准确率可达96\%}
+  \end{itemize}
 \end{itemize}
 
 % \begin{onehalfspacing}
@@ -77,18 +149,26 @@
 % \end{itemize}
 % \end{onehalfspacing}
 
-\section{竞赛获奖/项目作品}
+\section{\textbf{\stk{科研成果}}}
 % increase linespacing [parsep=0.5ex]
 \begin{itemize}[parsep=0.2ex]
-%   \item LeetCodeOJ Solutions, \textit{https://github.com/hijiangtao/LeetCodeOJ}
-  \item 第三届中国软件杯大学生软件设计大赛\textbf{全国一等奖}( \textit{http://www.cnsoftbei.com/} ),2014 年8月
-  \item 中国机器人大赛创意设计大赛\textbf{全国特等奖}( \textit{http://www.rcccaa.org/} ),2013年8月
-%   \item 中国机器人大赛暨Robocup公开赛(武术擂台赛)全国一等奖,2013年10月
-  \item 第11届北京理工大学“世纪杯”竞赛学生课外科技作品竞赛\textbf{特等奖},2013年8月
-  \item VIS Components for security system, \textit{https://hijiangtao.github.io/ss-vis-component/}
-  \item 个人博客：\textit{https://hijiangtao.github.io/}，更多作品见 \textit{https://github.com/hijiangtao}
-%   \item 电视节目"爸爸去哪儿"可视化分析展示, \textit{https://hijiangtao.github.io/variety-show-hot-spot-vis/}
+  \item \textbf{Huang, Z.}, Deng, W., Zhang, S., \& Li, S. (2023). \textbf{Optimal shapes of disk assembly in saturated random packings}. \textit{Soft Matter}, 19(18), 3325-3336.
+  \item Wang, Y., Deng, W., \textbf{Huang, Z.}, \& Li, S. (2022). \textbf{Descriptor-free unsupervised learning method for local structure identification in particle packings}. \textit{The Journal of Chemical Physics}, 156(15).
+  \item \textbf{Huang, Z.}, Deng, W., Yuan, Y., Liu, L., Wang, Y., \& Li, S. (2022). \textbf{Determining the equivalent packing diameter of two-dimensional shapes}. \textit{Powder Technology}, 396, 565-577.
 \end{itemize}
+
+
+% \section{\faCogs\ IT 技能}
+\section{\textbf{\stk{个人技能}}}
+% increase linespacing [parsep=0.5ex]
+\begin{itemize}[parsep=0.2ex]
+  \item \textbf{\stk{编程语言}}: Python, C/C++, SQL%\stk{（熟悉数据结构与算法）}
+  \item \textbf{\stk{工具与框架结构}}: TensorFlow, PyTorch, MATLAB, Git, Linux, PostgreSQL 
+  \item \textbf{\stk{证书与语言}}: \stk{TensorFlow开发者专业证书、TensorFlow高级技术专项、\stk{托福} - 101/120}
+\end{itemize}
+
+
+% \end{itemize}
 
 % \section{\faHeartO\ 项目/作品摘要}
 % \section{项目/作品摘要}
@@ -98,16 +178,25 @@
 % \datedline{\textit{LeetCodeOJ Solutions}, https://github.com/hijiangtao/LeetCodeOJ}{}
 % \datedline{\textit{Info-Vis}, https://github.com/ISCAS-VIS/infovis-ucas}{}
 
-
-% \section{\faInfo\ 社会实践/其他}
-\section{社区参与/实践其他}
-% increase linespacing [parsep=0.5ex]
+\section{\textbf{\stk{更多信息}}}
 \begin{itemize}[parsep=0.2ex]
-  \item 乐于参与开源社区讨论,\textbf{参与翻译 Vue.js, webpack, WebAssembly, Babel 文档，印记中文成员}
-  \item 中国科学院大学2016秋季学期可视化与可视分析课程助教，\textit{http://vis.ios.ac.cn/infovis-ucas/}
-  \item 未来论坛学生会成员、北理社联新闻信息中心主任、北理工软件学院学生会宣传部副部长(2012-2016)
-  \item 2013-2015 北京市共青团“温暖衣冬”志愿者,第九届园博会志愿者,2014 FLL机器人世锦赛志愿者
+  \item \textbf{\stk{荣誉奖励}}: \stk{北京大学校长奖学金、国家留学基金委奖学金、李惠荣奖学金、优秀科研奖（2次）}
+  \item \textbf{\stk{学生工作}}: \stk{校学生台湾研究会会长、校学生记者团主编、博士班级班长、院团委组织部副部长} 
 \end{itemize}
+
+% \section{\textbf{\stk{个人总结}}}
+% \stk{本人在校成绩优秀、性格开朗、踏实负责、勇于探索；具备出色沟通能力及组织能力，也具备较强的团队合作能力；数理基础和编程功底扎实，逻辑思维缜密，对人工智能及数据科学有极强的兴趣。}
+
+
+%\section{\faInfo\ 社会实践/其他}
+% \section{社区参与/实践其他}
+% % increase linespacing [parsep=0.5ex]
+% \begin{itemize}[parsep=0.2ex]
+%   \item 乐于参与开源社区讨论,\textbf{参与翻译 Vue.js, webpack, WebAssembly, Babel 文档，印记中文成员}
+%   \item 中国科学院大学2016秋季学期可视化与可视分析课程助教，\textit{http://vis.ios.ac.cn/infovis-ucas/}
+%   \item 未来论坛学生会成员、北理社联新闻信息中心主任、北理工软件学院学生会宣传部副部长(2012-2016)
+%   \item 2013-2015 北京市共青团“温暖衣冬”志愿者,第九届园博会志愿者,2014 FLL机器人世锦赛志愿者
+% \end{itemize}
 
 %% Reference
 %\newpage
